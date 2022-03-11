@@ -9,8 +9,9 @@ int main(void)
 {
 	int ch = 48;
 	int line_break = 10;
+	int m;
 
-	for (int m = ch; m > ch + 10; m++)
+	for (m = ch; m > ch + 10; m++)
 		putchar(m);
 	putchar(line_break);
 	return (0);
