@@ -21,7 +21,7 @@ int main(void)
 		{
 			putchar(i);
 			putchar(j);
-			if (i == digit + 10 - 1 && j == digit + 10)
+			if (i == digit + 10 - 2 && j == digit + 10)
 				break;
 			putchar(comma);
 			putchar(space);
