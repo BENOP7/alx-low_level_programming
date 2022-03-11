@@ -11,10 +11,12 @@ int main(void)
 	int upper = 65;
 	int lower = 97;
 	int line_break = 10;
+	int m;
+	int n;
 
-	for (int m = lower; m < lower + 26; m++)
+	for (m = lower; m < lower + 26; m++)
 		putchar(m);
-	for (int n = upper; n < upper + 26; n++)
+	for (n = upper; n < upper + 26; n++)
 		putchar(n);
 	putchar(line_break);
 	return (0);
