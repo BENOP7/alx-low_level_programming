@@ -11,7 +11,7 @@ int main(void)
 	int ch = 122;
 	int first = 97;
 
-	for (int m = ch; m >= first; m--)
+	for (m = ch; m >= first; m--)
 		putchar(m);
 	putchar(line_break);
 	return (0);
