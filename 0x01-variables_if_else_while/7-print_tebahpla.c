@@ -10,6 +10,7 @@ int main(void)
 	int line_break = 10;
 	int ch = 122;
 	int first = 97;
+	int m;
 
 	for (m = ch; m >= first; m--)
 		putchar(m);
