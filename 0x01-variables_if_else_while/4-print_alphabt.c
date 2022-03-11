@@ -12,7 +12,11 @@ int main(void)
 	int m;
 
 	for (m = ch; m < ch + 26; m++)
+	{
+		if (m == ch + 5 - 1 || m == ch + 17 - 1)
+			continue;
 		putchar(m);
+	}
 	putchar(line_break);
 	return (0);
 }
