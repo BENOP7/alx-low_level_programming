@@ -13,10 +13,10 @@ int main(void)
 	{
 		if (i == 50)
 		{
-			printf("%d\n", fibonacci((long) i));
+			printf("%ld\n", fibonacci((long) i));
 			break;
 		}
-		printf("%d, ", fibonacci(i));
+		printf("%ld, ", fibonacci((long) i));
 	}
 	return (0);
 }
