@@ -14,7 +14,7 @@ void print_to_98(int n)
 	{
 		if (k == 98)
 		{
-			printf("%d", k);
+			printf("%d\n", k);
 			break;
 		}
 		printf("%d, ", k);
