@@ -11,6 +11,11 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
+		if (i == 50)
+		{
+			printf("%d\n", fibonacci(i));
+			break;
+		}
 		printf("%d, ", fibonacci(i));
 	}
 	return (0);
