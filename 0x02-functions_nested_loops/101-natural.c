@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	sum_multiples();
+	printf("%d\n", sum_multiples());
 	return (0);
 }
 
