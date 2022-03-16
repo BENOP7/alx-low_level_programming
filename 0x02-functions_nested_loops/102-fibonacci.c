@@ -13,7 +13,7 @@ int main(void)
 	{
 		if (i == 50)
 		{
-			printf("%d\n", fibonacci(i));
+			printf("%d\n", fibonacci((long) i));
 			break;
 		}
 		printf("%d, ", fibonacci(i));
@@ -26,7 +26,7 @@ int main(void)
  * @n: position
  * Return: fibonacci value
  */
-int fibonacci(int n)
+long fibonacci(long n)
 {
 	if (n == 1)
 		return (1);
