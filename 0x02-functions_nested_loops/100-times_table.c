@@ -57,11 +57,23 @@ int count_digits(int num)
 void print_num(int num)
 {
 	int tmp_dgt;
+	int digits = count_digits(num);
+	int i;
+	int trunc = 1;
 
-	while (num != 0)
+	if (num == 0)
+		_putchar('0');
+
+	for (i = 0; i < digits - 1; i++)
 	{
-		tmp_dgt = num % 10;
-		num /= 10;
+		trunc *= 10;
+	}
+
+	while (trunc != 0)
+	{
+		tmp_dgt = num / trunc;
+		num -= trunc;
+		trunc /= 10;
 		_putchar('0' + tmp_dgt);
 	}
 }
