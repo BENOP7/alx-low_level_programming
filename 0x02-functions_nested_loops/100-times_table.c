@@ -61,9 +61,6 @@ void print_num(int num)
 	int i;
 	int trunc = 1;
 
-	if (num == 0)
-		_putchar('0');
-
 	for (i = 0; i < digits - 1; i++)
 	{
 		trunc *= 10;
