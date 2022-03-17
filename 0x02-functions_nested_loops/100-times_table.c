@@ -8,12 +8,11 @@
 void print_times_table(int n)
 {
 	const int F_LEN = 4;
+	int i;
+	int j;
 
 	if (n < 0 || n > 15)
 		return;
-
-	int i;
-	int j;
 
 	for (i = 0; i <= n; i++)
 	{
@@ -21,7 +20,7 @@ void print_times_table(int n)
 		{
 			_putchar('0');
 			_putchar(',');
-			print_spaces(i * j);
+			print_spaces(i * j, F_LEN);
 			print_num(i * j);
 			if (j != n)
 				_putchar(',');
@@ -68,21 +67,23 @@ void print_num(int num)
 /**
  * space_count - calculate spaces before each entry on table
  * @num: number to be placed on the table
+ * @f_len: format length
  * Return: numberr of spaces (int)
  */
-int space_count(int num)
+int space_count(int num, int f_len)
 {
-	return (F_LEN - count_digits(num));
+	return (f_len - count_digits(num));
 }
 
 /**
  * print_spaces - print spaces
  * @num: input number for the particular entry
+ * @f_len: format length
  * Return: void
  */
-void print_spaces(int num)
+void print_spaces(int num, int f_len)
 {
-	int spc_count = space_count(num);
+	int spc_count = space_count(num, f_len);
 	int i;
 
 	for (i = 0; i < spc_count; i++)
