@@ -21,6 +21,8 @@ void print_times_table(int n)
 
 		for (j = 0; j <= n; j++)
 		{
+			if (j == 0)
+				continue;
 			print_spaces(i * j, F_LEN);
 			print_num(i * j);
 			if (j != n)
