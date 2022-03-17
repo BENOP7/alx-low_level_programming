@@ -12,3 +12,8 @@ int add(int, int);
 void print_to_98(int);
 int sum_multiples(void);
 long fibonacci(long);
+void print_times_table(int n);
+int space_count(int);
+int count_digits(int);
+void print_spaces(int);
+void print_num(int);
