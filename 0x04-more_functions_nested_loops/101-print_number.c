@@ -7,13 +7,16 @@
  */
 void print_number(int n)
 {
+	if (n < 0)
+		n *= -1;
+
 	int trunc = calc_trunc(n);
 	int tmp_dgt;
 
 	while (trunc != 0)
 	{
 		tmp_dgt = n / trunc;
-		n = n - trunc;
+		n = n - tmp_dgt * trunc;
 		trunc /= 10;
 		print_digit(tmp_dgt);
 	}
@@ -65,7 +68,7 @@ int calc_trunc(int n)
 	int trunc = 1;
 	int p;
 
-	for (p = 0; p < count_digit(n); p++)
+	for (p = 0; p < count_digit(n) - 1; p++)
 	{
 		trunc *= 10;
 	}

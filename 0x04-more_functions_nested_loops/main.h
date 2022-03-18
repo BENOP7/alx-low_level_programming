@@ -14,5 +14,8 @@ void print_square(int);
 void print_triangle(int);
 void print_number(int);
 void print_digits(int);
+void print_digit(int);
+int calc_trunc(int);
+int count_digit(int);
 
 #endif
