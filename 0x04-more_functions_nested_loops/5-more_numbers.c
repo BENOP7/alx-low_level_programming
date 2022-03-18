@@ -11,7 +11,7 @@ void more_numbers(void)
 
 	for (j = '0'; j <= '9'; j++)
 	{
-		for (n = 1; n <= 14; n++)
+		for (n = 0; n <= 14; n++)
 		{
 			print_digits(n);
 		}
@@ -20,6 +20,11 @@ void more_numbers(void)
 	}
 }
 
+/**
+ * print_digits - prints a number digit by digit
+ * @n: number to be printed
+ * Return: void
+ */
 void print_digits(int n)
 {
 	int trunc = 10;
