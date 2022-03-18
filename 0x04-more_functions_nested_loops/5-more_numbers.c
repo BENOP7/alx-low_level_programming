@@ -27,7 +27,7 @@ void print_digits(int n)
 
 	if (n >= '0' && n <= '9')
 	{
-		_putchar(n);
+		_putchar('0' + n);
 		return;
 	}
 
@@ -36,6 +36,6 @@ void print_digits(int n)
 		tmp = n / trunc;
 		n -= tmp * trunc;
 		trunc /= 10;
-		_putchar(tmp);
+		_putchar('0' + tmp);
 	}
 }
