@@ -18,14 +18,16 @@ int main(void)
 			printf("Fizz ");
 		else if (n % 5 == 0)
 		{
-			printf("Buzz ");
 			if (n == 100)
+			{
+				printf("Buzz");
 				printf("\n");
+				break;
+			}
+			printf("Buzz ");
 		}
 		else
 			printf("%d ", n);
-		if (n == 108)
-			printf("\n");
 	}
 
 	return (0);
