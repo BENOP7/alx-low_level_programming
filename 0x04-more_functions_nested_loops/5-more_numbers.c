@@ -8,7 +8,7 @@ void more_numbers(void)
 {
 	int n;
 	int j;
-	
+
 	for (j = '0'; j <= '9'; j++)
 	{
 		for (n = 1; n <= 14; n++)
@@ -25,7 +25,7 @@ void print_digits(int n)
 	int trunc = 10;
 	int tmp;
 
-	if (n >= '0' && n <= '9')
+	if (n >= 0 && n <= 9)
 	{
 		_putchar('0' + n);
 		return;
