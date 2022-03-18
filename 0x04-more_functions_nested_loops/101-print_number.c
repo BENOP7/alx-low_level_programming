@@ -7,37 +7,25 @@
  */
 void print_number(int n)
 {
-	if (n < 0)
-		n *= -1;
-
-	int trunc = calc_trunc(n);
+	int number = n;
+	int trunc = calc_trunc(number);
 	int tmp_dgt;
+
+	if (number < 0)
+	{
+		number *= -1;
+		_putchar('-');
+	}
 
 	while (trunc != 0)
 	{
-		tmp_dgt = n / trunc;
-		n = n - tmp_dgt * trunc;
+		tmp_dgt = number / trunc;
+		number -= (tmp_dgt * trunc);
 		trunc /= 10;
-		print_digit(tmp_dgt);
+		_putchar('0' + tmp_dgt);
 	}
 
-}
-
-/**
- * print_digit - prints number digit by digit
- * @digit: input digit
- * Return: void
- */
-void print_digit(int digit)
-{
-	if (digit < 0)
-	{
-		_putchar('0' + (digit * -1));
-	}
-	else
-	{
-		_putchar('0' + digit);
-	}
+	_putchar('\n');
 }
 
 /**
@@ -45,7 +33,7 @@ void print_digit(int digit)
  * @n: number
  * Return: number of digits in number
  */
-int count_digit(int n)
+int count_digits(int n)
 {
 	int count = 0;
 
@@ -68,7 +56,7 @@ int calc_trunc(int n)
 	int trunc = 1;
 	int p;
 
-	for (p = 0; p < count_digit(n) - 1; p++)
+	for (p = 0; p < count_digits(n) - 1; p++)
 	{
 		trunc *= 10;
 	}
