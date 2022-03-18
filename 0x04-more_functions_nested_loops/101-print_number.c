@@ -24,12 +24,10 @@ void print_number(int n)
 		trunc /= 10;
 		_putchar('0' + tmp_dgt);
 	}
-
-	_putchar('\n');
 }
 
 /**
- * count_digit - counts digits in a number
+ * count_digits - counts digits in a number
  * @n: number
  * Return: number of digits in number
  */
