@@ -19,7 +19,7 @@ int main(void)
 			num /= (long long) div;
 			largest = div;
 		}
-		div++
+		div++;
 	}
 
 	printf("%ld\n", largest);
