@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long long num = 612852475143;
+	long num = 612852475143;
 	long div = 2;
 	long largest = 0;
 
@@ -16,7 +16,7 @@ int main(void)
 	{
 		if (num % div == 0)
 		{
-			num /= (long long) div;
+			num /= div;
 			largest = div;
 		}
 		div++;
