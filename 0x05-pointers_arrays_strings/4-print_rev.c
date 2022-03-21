@@ -8,6 +8,7 @@
 void print_rev(char *s)
 {
 	char *tp = s;
+	char *i;
 
 	if (s[0] == '\0')
 	{
@@ -20,9 +21,9 @@ void print_rev(char *s)
 		tp = tp + 1;
 	}
 
-	while (tp >= s)
+	for (i = tp - 1; i >= s; i -= 1)
 	{
-		tp = tp - 1;
-		_putchar(*tp);
+		_putchar(*i);
 	}
+	_putchar('\n');
 }
