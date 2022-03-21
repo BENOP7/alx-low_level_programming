@@ -25,6 +25,4 @@ void print_rev(char *s)
 		tp = tp - 1;
 		_putchar(*tp);
 	}
-
-	_putchar('\n');
 }
