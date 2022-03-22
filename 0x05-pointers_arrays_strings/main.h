@@ -14,5 +14,9 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
+int get_number(int idx, char *s);
+int is_number(char);
+int contains_digit(char *str);
+int number_negative(char *str);
 
 #endif
