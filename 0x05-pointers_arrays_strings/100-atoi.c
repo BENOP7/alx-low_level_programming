@@ -13,8 +13,6 @@ int _atoi(char *s)
 	if (contains_digit(s) == 0)
 		return (0);
 
-	if (number_negative(s) == 1)
-		_putchar('-');
 
 	while (s[index] != '\0')
 	{
@@ -34,6 +32,9 @@ int _atoi(char *s)
 
 		index++;
 	}
+
+	if (number_negative(s) == 1)
+		return n * -1;
 
 	return (n);
 }
