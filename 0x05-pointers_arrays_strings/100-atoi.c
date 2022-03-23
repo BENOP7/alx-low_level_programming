@@ -34,7 +34,7 @@ int _atoi(char *s)
 	}
 
 	if (number_negative(s) == 1)
-		return n * -1;
+		return (n * -1);
 
 	return (n);
 }
