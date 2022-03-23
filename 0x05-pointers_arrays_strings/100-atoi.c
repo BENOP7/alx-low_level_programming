@@ -16,15 +16,15 @@ int _atoi(char *s)
 	if (number_negative(s) == 1)
 		_putchar('-');
 
-	while (str[index] != '\0')
+	while (s[index] != '\0')
 	{
 		int i = 0;
 
-		if (is_number(str[index]) == 1)
+		if (is_number(s[index]) == 1)
 		{
 			i = index;
 
-			if (is_number(str[i]) == 1)
+			if (is_number(s[i]) == 1)
 			{
 				n = get_number(i, s);
 			}
@@ -34,6 +34,8 @@ int _atoi(char *s)
 
 		index++;
 	}
+
+	return (n);
 }
 
 /**
@@ -74,7 +76,7 @@ int is_number(char c)
  */
 int contains_digit(char *str)
 {
-	int idx = 0;
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
