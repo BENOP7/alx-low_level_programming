@@ -12,25 +12,28 @@ char *_strcat(char *dest, char *src)
 {
 	int len_dest = _strlen(dest);
 	int len_src = _strlen(src);
-	char conc[len_dest + len_src];
 	int j = 0;
 
 	while (dest[j] != '\0')
 	{
-		conc[j] = dest[j];
 		j++;
 	}
 
 	do {
-		conc[j] = src[j];
-                j++;
-	} while (src[j] != '\0');
+		dest[j] = src[j - len_dest];
+		j++;
+	} while (src[j - len_dest] != '\0');
 
-	conc[i] = '\0';
+	dest[i] = '\0';
 
-	return (conc);
+	return (dest);
 }
 
+/**
+ * _strlen - returns length of a string
+ * @s: string
+ * Return: length of the string
+ */
 int _strlen(char *s)
 {
 	int count = 0;
