@@ -41,6 +41,7 @@ char *cap_string(char *str)
 			if (wflag == 1)
 				wflag = 0;
 		}
+		wflag = 0;
 		i++;
 	}
 	return (str);
