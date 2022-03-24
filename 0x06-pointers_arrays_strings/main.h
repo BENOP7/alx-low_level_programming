@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _putchar(int);
 char *leet(char *);
 char *cap_string(char *);
 char *string_toupper(char *);
