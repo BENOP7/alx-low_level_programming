@@ -2,21 +2,62 @@
 
 /**
  * print_number - prints an integer
- * @n: integer
+ * @n: input integer
  * Return: void
  */
 void print_number(int n)
 {
-	if (n < 0)
+	int number = n;
+	int trunc = calc_trunc(number);
+	int tmp_dgt;
+
+	if (number < 0)
 	{
-		_putchar(45);
-		n = -n;
+		number *= -1;
+		_putchar('-');
 	}
 
-	if (n / 10)
+	while (trunc != 0)
 	{
-		print_number(n / 10);
+		tmp_dgt = number / trunc;
+		number -= (tmp_dgt * trunc);
+		trunc /= 10;
+		_putchar('0' + tmp_dgt);
+	}
+}
+
+/**
+ * count_digits - counts digits in a number
+ * @n: number
+ * Return: number of digits in number
+ */
+int count_digits(int n)
+{
+	int count = 0;
+
+	while (n != 0)
+	{
+		n /= 10;
+		count++;
 	}
 
-	_putchar(48 + (n % 10));
+	return (count);
+}
+
+/**
+ * calc_trunc - computes the initial trunc value of a number
+ * @n: number
+ * Return: value of trunc
+ */
+int calc_trunc(int n)
+{
+	int trunc = 1;
+	int p;
+
+	for (p = 0; p < count_digits(n) - 1; p++)
+	{
+		trunc *= 10;
+	}
+
+	return (trunc);
 }
