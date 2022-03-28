@@ -8,8 +8,6 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *p = haystack;
-
 	while (*haystack)
 	{
 		if (*haystack == *needle && compare(haystack, needle))
@@ -19,7 +17,7 @@ char *_strstr(char *haystack, char *needle)
 		haystack++;
 	}
 
-	return (p);
+	return (NULL);
 }
 
 /**

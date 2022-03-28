@@ -8,9 +8,14 @@
  */
 int main(void)
 {
-	char a[40] = "Jesus is the best";
+/*	char a[40] = "Jesus is the best";*/
+	char a[] = "Hello World";
+	char b[] = "World";
 
-	printf("%d\n", _strspn(a, "best"));
+	printf("%s\n", _strstr(a, b));
+/*	printf("%s\n", _strpbrk(a, b));
+
+	printf("%d\n", _strspn(a, "best"));*/
 
 /*	printf("string pointer %p\n", a);
 	printf("character position: %ld\n", _strchr(a, ' ') - a);*/

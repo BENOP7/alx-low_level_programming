@@ -9,5 +9,6 @@ int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *, char *);
 int compare(char *, char *);
+#define NULL 0
 
 #endif
