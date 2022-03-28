@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * _strstr - locates a substrings in another string
@@ -9,7 +9,7 @@ include "main.h"
 char *_strstr(char *haystack, char *needle)
 {
 	char *p = 0;
-	
+
 	while (*haystack)
 	{
 		if (*haystack == *needle && compare(haystack, needle))
@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
  * @a: string a
  * @b: string b
  * Return: 1 if a equals b, otherwise 0
- */l
+ */
 int compare(char *a, char *b)
 {
 	while (*a && *b)
