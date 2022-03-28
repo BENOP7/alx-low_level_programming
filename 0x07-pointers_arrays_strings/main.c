@@ -9,9 +9,11 @@
 int main(void)
 {
 	char a[40] = "Jesus is the best";
-	
-	printf("string pointer %p\n", a);
-	printf("character position: %ld\n", _strchr(a, ' ') - a);
+
+	printf("%d\n", _strspn(a, "best"));
+
+/*	printf("string pointer %p\n", a);
+	printf("character position: %ld\n", _strchr(a, ' ') - a);*/
 
 /**	_memset(a, c, 20);
 
