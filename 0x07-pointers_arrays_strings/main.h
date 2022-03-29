@@ -11,5 +11,6 @@ int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 int compare(char *a, char *b);
+void set_string(char **, char *);
 
 #endif
