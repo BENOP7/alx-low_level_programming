@@ -9,5 +9,6 @@ int factorial(int);
 int _pow_recursion(int , int);
 int _sqrt_recursion(int n);
 int is_prime_number(int);
+int wildcmp(char *, char *);
 
 #endif
