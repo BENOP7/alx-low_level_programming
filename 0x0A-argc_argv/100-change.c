@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - print minimum number of coins to make change for a given amount
@@ -47,4 +49,5 @@ int minimum_coins(int n)
 
 	if ((n - 1) >= 0)
 		return (1 + minimum_coins(n - 1));
+	return (0);
 }
