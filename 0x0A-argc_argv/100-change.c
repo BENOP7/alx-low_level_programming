@@ -18,7 +18,10 @@ int main(int argc, char **argv)
 
 	if (argc == 2)
 	{
-		printf("%d\n", minimum_coins(atoi(argv[1])));
+		if (atoi(argv[1]) < 0)
+			printf("0\n");
+		else
+			printf("%d\n", minimum_coins(atoi(argv[1])));
 		return (0);
 	}
 
