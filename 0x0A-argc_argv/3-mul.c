@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	int a = _atoi(argv[1]);
 	int b = _atoi(argv[2]);
 
-	if (argc == 3 && a != -1 && b != -1)
+	if (argc == 3 && a != -999 && b != -999)
 	{
 		print_number(a * b);
 	}
@@ -57,7 +57,7 @@ int _atoi(char *s)
 		else
 		{
 			if (s[i] != '-')
-				return (-1);
+				return (-999);
 		}
 	}
 
