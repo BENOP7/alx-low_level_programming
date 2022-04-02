@@ -11,12 +11,13 @@
 int main(int argc, char **argv)
 {
 	int e = 0;
-
 	char *err = "Error";
+	int a = _atoi(argv[1]);
+	int b = _atoi(argv[2]);
 
-	if (argc == 3)
+	if (argc == 3 && a != -1 && b != -1)
 	{
-		print_number(_atoi(argv[1]) * _atoi(argv[2]));
+		print_number(a * b);
 	}
 	else
 	{
@@ -52,6 +53,11 @@ int _atoi(char *s)
 		{
 			number *= 10;
 			number += (s[i] - '0');
+		}
+		else
+		{
+			if (s[i] != '-')
+				return (-1);
 		}
 	}
 
