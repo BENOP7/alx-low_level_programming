@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 		else
 		{
 			_putchar('1');
-			_putchar('0' + (argc - 1))
+			_putchar('0' + ((argc - 1) % 10));
 		}
 		_putchar('\n');
 	}
