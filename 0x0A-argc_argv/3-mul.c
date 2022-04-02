@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 		print_number(a * b);
 		_putchar('\n');
 	}
-	else if (argc == 1 || argc > 3)
+	else
 	{
 		while (err[e])
 		{
