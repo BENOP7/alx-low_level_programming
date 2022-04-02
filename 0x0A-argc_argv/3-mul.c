@@ -10,8 +10,6 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 0;
-	int j = 0;
 	int e = 0;
 
 	char *err = "Error";
