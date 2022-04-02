@@ -12,15 +12,17 @@ int main(int argc, char **argv)
 {
 	int i;
 	int sum = 0;
+	char *err = "Error";
 
 	for (i = 1; i < argc; i++)
 	{
 		if (check_number(argv[i]) == 0)
 		{
 			print_error(err);
-			return (1)
+			return (1);
+		}
 	}
-	
+
 	for (i = 1; i < argc; i++)
 	{
 		sum += _atoi(argv[i]);
@@ -45,7 +47,7 @@ void print_error(char *msg)
 		_putchar(msg[e]);
 		e++;
 	}
-	_putchar('\n');	
+	_putchar('\n');
 }
 
 /**
