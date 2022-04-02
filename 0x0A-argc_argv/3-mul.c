@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	int a = _atoi(argv[1]);
 	int b = _atoi(argv[2]);
 
-	if (argc == 3 && a != -999 && b != -999)
+	if (argc == 3)
 	{
 		print_number(a * b);
 		_putchar('\n');
