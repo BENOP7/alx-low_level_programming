@@ -18,8 +18,9 @@ int main(int argc, char **argv)
 	if (argc == 3 && a != -999 && b != -999)
 	{
 		print_number(a * b);
+		_putchar('\n');
 	}
-	else
+	else if (argc == 1 || argc > 3)
 	{
 		while (err[e])
 		{
