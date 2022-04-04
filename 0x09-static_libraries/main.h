@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int get_number(int, char*);
+int is_number(char);
+int number_negative(char*);
+int contains_digit(char*);
 int compare(char *, char *);
 int _putchar(char c);
 int _islower(int c);
