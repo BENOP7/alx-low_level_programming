@@ -20,14 +20,17 @@ char *argstostr(int ac, char **av)
 
 	while (k < ac)
 	{
-		while (*(av[k]))
+		int i = 0;
+
+		while (*(av[k] + i))
 		{
+			i++;
 			ch++;
 		}
 		k++;
 	}
 
-	buffer = (char *) malloc((ch + ac) * sizeof(char));
+	buffer = (char *) malloc((ch + ac + 1) * sizeof(char));
 
 	if (!buffer)
 		return ((char *) 0);
@@ -40,6 +43,8 @@ char *argstostr(int ac, char **av)
 			buffer[i++] = *(av[k] + j++);
 		buffer[i++] = '\n';
 	}
+
+	buffer[i] = '\0';
 
 	return (buffer);
 }
