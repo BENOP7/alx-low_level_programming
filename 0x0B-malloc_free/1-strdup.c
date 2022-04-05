@@ -13,6 +13,9 @@ char *_strdup(char *str)
 	char *membuff;
 	int j = 0;
 
+	if (str == (char *) 0)
+		return ((char *) 0);
+
 	while (!str[j])
 	{
 		j++;
@@ -27,8 +30,6 @@ char *_strdup(char *str)
 	{
 		membuff[i] = str[i];
 	}
-
-	membuff[i] = '\0';
 
 	return (membuff);
 }
