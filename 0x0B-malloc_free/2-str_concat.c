@@ -28,6 +28,9 @@ char *str_concat(char *s1, char *s2)
 
 	mem = (char *) malloc((len1 + len2 + 1) * sizeof(char));
 
+	if (!mem)
+		return ((char *) 0);
+
 	for (k = 0; *s1; k++)
 	{
 		mem[k] = *s1++;
