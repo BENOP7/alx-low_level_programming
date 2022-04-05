@@ -10,24 +10,25 @@
 char *_strdup(char *str)
 {
 	int i = 0;
-	int j;
+	char *membuff;
+	int j = 0;
 
-	while (!str[i])
+	while (!str[j])
 	{
-		i++;
+		j++;
 	}
 
-	char *membuff = (char *) malloc((i + 1) * sizeof(char));
+	membuff = (char *) malloc((j + 1) * sizeof(char));
 
 	if (membuff == ((char *) 0))
 		return ((char *) 0);
 
-	for (j = 0; j <= i; i++)
+	for (i = 0; i <= j; i++)
 	{
-		membuff[j] = str[j];
+		membuff[i] = str[i];
 	}
 
-	membuff[j] = '\0';
+	membuff[i] = '\0';
 
 	return (membuff);
 }
