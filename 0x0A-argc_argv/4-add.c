@@ -12,20 +12,23 @@ int main(int argc, char **argv)
 {
 	int i;
 	int sum = 0;
+	int tmp;
 	char *err = "Error";
 
 	for (i = 1; i < argc; i++)
 	{
-		if (check_number(argv[i]) == 0)
+		tmp = _atoi(argv[i]);
+
+		if (check_number(argv[i]) && tmp != -999)
+		{
+			sum += tmp;
+			continue;
+		}
+		else
 		{
 			print_error(err);
 			return (1);
 		}
-	}
-
-	for (i = 1; i < argc; i++)
-	{
-		sum += _atoi(argv[i]);
 	}
 
 	print_number(sum);
@@ -61,7 +64,7 @@ int check_number(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '-')
+		if (s[i] == '-' && i == 0)
 			continue;
 		if (s[i] < '0' && s[i] > '9')
 		{
@@ -71,7 +74,7 @@ int check_number(char *s)
 	return (1);
 }
 
-/**
+/**d
  * _atoi - returns an integer from a string
  * @s: string
  * Return: integer value
