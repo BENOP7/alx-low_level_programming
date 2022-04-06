@@ -38,19 +38,19 @@ int minimum_coins(int n)
 	if (n == 0)
 		return (0);
 
-	if ((n - 25) >= 0)
-		return (1 + minimum_coins(n - 25));
+	if (n / 25)
+		return ((n / 25) + minimum_coins(n % 25));
 
-	if ((n - 10) >= 0)
-		return (1 + minimum_coins(n - 10));
+	if (n / 10)
+		return ((n / 10) + minimum_coins(n % 10));
 
-	if ((n - 5) >= 0)
-		return (1 + minimum_coins(n - 5));
+	if (n / 5)
+		return (n / 5 + minimum_coins(n % 5));
 
-	if ((n - 2) >= 0)
-		return (1 + minimum_coins(n - 2));
+	if (n / 2)
+		return (n / 2 + minimum_coins(n % 2));
 
-	if ((n - 1) >= 0)
+	if (n / 1)
 		return (1 + minimum_coins(n - 1));
 	return (0);
 }
