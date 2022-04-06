@@ -4,7 +4,7 @@
 /**
  * alloc_grid - creates 2 dimensional array of integers in memory
  * @width: number of columns
- * @heght: number of rows
+ * @height: number of rows
  * Return: pointer to 2d array of integers
  */
 int **alloc_grid(int width, int height)
@@ -13,8 +13,11 @@ int **alloc_grid(int width, int height)
 	int j;
 	int **grid;
 	
+	if (width < 1 || height < 1)
+		return ((int **) 0);
+
 	grid = (int **) malloc(sizeof(int *) * height);
-	
+
 	if (!grid)
 	{
 		return ((int **) 0);
@@ -23,7 +26,7 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		*(grid + i) = (int *) malloc(sizeof(int) * width);
-		
+
 		if (!*(grid + i))
 			return ((int **) 0);
 
