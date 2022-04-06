@@ -74,7 +74,7 @@ int check_number(char *s)
 	return (1);
 }
 
-/**d
+/**
  * _atoi - returns an integer from a string
  * @s: string
  * Return: integer value
