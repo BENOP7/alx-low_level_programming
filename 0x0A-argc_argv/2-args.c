@@ -16,11 +16,7 @@ int main(int argc, char **argv)
 	for (; i < argc; i++)
 	{
 		while (*(*(argv + i) + j))
-		{
-			_putchar(*(*(argv + i) + j));
-			j++;
-		}
-		i++;
+			_putchar(*(*(argv + i) + j++));
 		j = 0;
 		_putchar('\n');
 	}
