@@ -12,11 +12,12 @@ int main(int argc, char **argv)
 {
 	int e = 0;
 	char *err = "Error";
-	int a = _atoi(argv[1]);
-	int b = _atoi(argv[2]);
 
 	if (argc == 3)
 	{
+		int a = _atoi(argv[1]);
+		int b = _atoi(argv[2]);
+
 		print_number(a * b);
 		_putchar('\n');
 	}
