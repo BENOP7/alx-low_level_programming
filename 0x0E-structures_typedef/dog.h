@@ -18,5 +18,7 @@ typedef struct dog
 void init_dog(struct dog *d, char *name, float age, char *ower);
 void print_dog(struct dog *);
 dog_t *new_dog(char *, float, char *);
+char *_strcpy(char *, char *);
+int _strlen(char *);
 
 #endif
