@@ -11,6 +11,7 @@ void put_number(int n)
 		put_number(n / 10);
 	_putchar('0' + n % 10);
 }
+
 /**
  * print_times_table - print the n times table
  * @n: integer input
@@ -24,6 +25,12 @@ void print_times_table(int n)
 
 	if (n < 0 || n > 15)
 		return;
+
+	if (!n)
+	{
+		_putchar('0');
+		return;
+	}
 
 	for (i = 0; i <= n; i++)
 	{
@@ -63,32 +70,6 @@ int count_digits(int num)
 	}
 
 	return (count);
-}
-
-/**
- * print_num - prints the number digit by digit
- * @num: number to be printed
- * Return: void
- */
-void print_num(int num)
-{
-	int tmp_dgt;
-	int digits = count_digits(num);
-	int i;
-	int trunc = 1;
-
-	for (i = 0; i < digits - 1; i++)
-	{
-		trunc *= 10;
-	}
-
-	while (trunc != 0)
-	{
-		tmp_dgt = num / trunc;
-		num -= trunc;
-		trunc /= 10;
-		_putchar('0' + tmp_dgt);
-	}
 }
 
 /**
