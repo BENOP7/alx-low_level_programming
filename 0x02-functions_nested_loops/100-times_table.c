@@ -1,6 +1,17 @@
 #include "main.h"
 
 /**
+ * put_number - prints an integer
+ * @n: number
+ * Return: void
+ */
+void put_number(int n)
+{
+	if (n / 10)
+		put_number(n / 10);
+	_putchar('0' + n % 10);
+}
+/**
  * print_times_table - print the n times table
  * @n: integer input
  * Return: void
@@ -24,7 +35,7 @@ void print_times_table(int n)
 			if (j == 0)
 				continue;
 			print_spaces(i * j, F_LEN);
-			print_num(i * j);
+			put_number(i * j);
 			if (j != n)
 				_putchar(',');
 		}
