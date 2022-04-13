@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "3-calc.h"
 
 /**
@@ -13,7 +14,7 @@ int main(int argc, char **argv)
 {
 	int num1;
 	int num2;
-	char *operator;
+	char *operator = argv[2];
 	int (*f)(int a, int b);
 
 	if (argc != 4)
