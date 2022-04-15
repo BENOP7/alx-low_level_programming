@@ -15,11 +15,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int *nums = malloc(n * sizeof(int));
 
-	if(!nums)
+	if (!nums)
 	{
 		return;
 	}
-	
+
+	if (!separator)
+		separator = "";
+
 	va_start(n_list, n);
 
 	for (i = 0; i < n; i++)
@@ -27,9 +30,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		nums[i] = va_arg(n_list, int);
 	}
 	va_end(n_list);
-
-	if (!separator)
-		separator = "";
 
 	for (i = 0; i < n; i++)
 	{
