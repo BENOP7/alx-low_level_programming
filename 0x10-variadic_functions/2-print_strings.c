@@ -15,7 +15,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char **strs = malloc(n * sizeof(*strs));
 
-	if (!strs)
+	if (!strs || !n)
 	{
 		return;
 	}
