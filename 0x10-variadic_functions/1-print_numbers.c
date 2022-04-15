@@ -15,8 +15,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int *nums = malloc(n * sizeof(int));
 
-	if (!nums)
+	if (!nums || !n)
 	{
+		printf("\n");
 		return;
 	}
 
