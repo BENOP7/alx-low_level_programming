@@ -17,6 +17,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (!strs || !n)
 	{
+		printf("\n");
 		return;
 	}
 
