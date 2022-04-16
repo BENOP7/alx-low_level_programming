@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 
 	if (!format)
 	{
-		printf("%s\n", "(nil)");
+		printf("\n");
 		return;
 	}
 
