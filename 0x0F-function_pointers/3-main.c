@@ -32,11 +32,6 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	f = get_op_func(argv[2]);
-	if (f == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
 
 	if ((!strcmp(operator, "/") || !strcmp(operator, "%")) && num2 == 0)
 	{
