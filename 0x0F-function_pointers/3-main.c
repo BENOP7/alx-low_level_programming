@@ -25,11 +25,17 @@ int main(int argc, char **argv)
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	f = get_op_func(argv[2]);
-	if (!f)
+
+	if (strlen(argv[2]) > 1)
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
+	}
+	f = get_op_func(argv[2]);
+	if (f == NULL)
+	{
+		printf("Error\n");
+		exit(99);
 	}
 
 	if ((!strcmp(operator, "/") || !strcmp(operator, "%")) && num2 == 0)
