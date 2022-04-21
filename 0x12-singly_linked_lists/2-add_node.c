@@ -22,7 +22,10 @@ list_t *add_node(list_t **head, const char *str)
 	while (new->str[i++])
 		;
 	new->len = i - 1;
-	new->next = *head;
+	if (!*head)
+		new->next = NULL;
+	else
+		new->next = *head;
 
 	*head = new;
 	return (*head);
