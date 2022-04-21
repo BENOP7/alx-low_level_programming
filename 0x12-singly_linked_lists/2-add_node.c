@@ -17,14 +17,20 @@ list_t *add_node(list_t **head, const char *str)
 
 	new = malloc(sizeof(list_t));
 	if (!new)
+	{
+		free(new);
 		return (NULL);
+	}
 	if (!str)
-		new->str = NULL;
+		return (NULL);
 	else
 	{
 		new->str = strdup(str);
 		if (!new->str)
+		{
+			free(new->str);
 			return (NULL);
+		}
 		while (new->str[i])
 			++i;
 	}
