@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-	int i;
+	long long i;
 
 	for (i = 1; i <= 50; i++)
 	{
 		if (i == 50)
 		{
-			printf("%ld\n", fibonacci((long) i));
+			printf("%lld\n", fibonacci(i));
 			break;
 		}
-		printf("%ld, ", fibonacci((long) i));
+		printf("%lld, ", fibonacci(i));
 	}
 	return (0);
 }
@@ -26,7 +26,7 @@ int main(void)
  * @n: position
  * Return: fibonacci value
  */
-long fibonacci(long n)
+long long fibonacci(long long n)
 {
 	if (n == 1)
 		return (1);
