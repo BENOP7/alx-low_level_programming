@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <strlib.h>
+#include <stdlib.h>
 
 /**
  * print_diagsums - print sum of diagonals of a square 2D array of integers
@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	while (i < size)
 	{
 		sum1 += a[i * (size + 1)];
-		sum2 += a[(size - 1) - i * (size - 1)]
+		sum2 += a[(size * size - 1) - (i + 1) * (size - 1)];
 		i += 1;
 	}
 	printf("%d, %d\n", sum1, sum2);
