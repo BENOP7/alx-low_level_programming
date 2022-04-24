@@ -11,10 +11,10 @@ void print_chessboard(char (*a)[8])
 {
 	size_t i = 0;
 	int j;
-	
+
 	if (!a)
 		return;
-	
+
 	while (i < (sizeof(*a) / sizeof(**a)))
 	{
 		for (j = 0; j < 8; j++)
