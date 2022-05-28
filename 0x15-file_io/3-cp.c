@@ -32,13 +32,13 @@ void close_files(int from, int to)
 	sc = close(from);
 	if (sc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
 		exit(100);
 	}
 	sc = close(to);
 	if (sc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
 		exit(100);
 	}
 }
