@@ -129,7 +129,7 @@ void print_version(unsigned char *e_ident)
 	else
 		printf("%i\n", e_ident[EI_VERSION]);
 }
- 
+
 /**
  * print_osabi - print ELF's osabi
  * @e_ident: pointer to char array
