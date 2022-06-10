@@ -28,7 +28,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx,
 		return (new);
 	}
 	tmp = *head;
-
 	while (tmp)
 	{
 		if (count == idx)
@@ -49,5 +48,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx,
 		}
 		tmp = tmp->next;
 	}
+	free(new);
 	return (NULL);
 }
