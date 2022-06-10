@@ -7,10 +7,9 @@
  * @str:string value to assign to the new node
  * Return: pointer to the new node
  */
-list_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	int i = 0;
-	list_t *new;
+	dlistint_t *new;
 
 	if (!head)
 		return (NULL);
