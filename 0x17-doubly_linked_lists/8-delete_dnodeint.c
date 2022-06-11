@@ -25,8 +25,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			free(tmp);
 			if (nxt)
 				nxt->prev = prv;
+			else
+				prv->next = NULL;
 			if (prv)
 				prv->next = nxt;
+			else
+				nxt->prev = NULL;
 			return (1);
 		}
 		++count;
