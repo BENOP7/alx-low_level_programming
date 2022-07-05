@@ -10,45 +10,45 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 
-hash_node_t *node;
-hash_node_t *new_node;
-unsigned long int index;
+	hash_node_t *node;
+	hash_node_t *new_node;
+	unsigned long int index;
 
-if (ht == NULL || *key == '\n' || *value == '\n')
-	return (0);
+	if (ht == NULL || *key == '\n' || *value == '\n')
+		return (0);
 
-index = key_index((const unsigned char *)key, ht->size);
-node = ht->array[index];
+	index = key_index((const unsigned char *)key, ht->size);
+	node = ht->array[index];
 
-if (node == NULL)
-{
+	if (node == NULL)
+	{
+		new_node = create_new_node(key, value);
+		if (new_node == NULL)
+			return (0);
+
+		ht->array[index] = new_node;
+		return (1);
+	}
+
+	/*If key exists, replace value*/
+	while (node != NULL)
+	{
+		if (strcmp(key, node->key) == 0)
+		{
+			free(node->value);
+			node->value = strdup(value);
+			return (1);
+		}
+		node = node->next;
+	}
+	/*If key doesn't exist, create new node*/
 	new_node = create_new_node(key, value);
 	if (new_node == NULL)
 		return (0);
 
+	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
-}
-
-/*If key exists, replace value*/
-while (node != NULL)
-{
-	if (strcmp(key, node->key) == 0)
-	{
-		free(node->value);
-		node->value = strdup(value);
-		return (1);
-	}
-	node = node->next;
-}
-/*If key doesn't exist, create new node*/
-new_node = create_new_node(key, value);
-if (new_node == NULL)
-	return (0);
-
-new_node->next = ht->array[index];
-ht->array[index] = new_node;
-return (1);
 }
 
 
