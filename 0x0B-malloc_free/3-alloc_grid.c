@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 		*(grid + i) = (int *) malloc(sizeof(int) * width);
 
 		if (*(grid + i) == NULL)
-		{	
+		{
 			while (i-- < 0)
 			{
 				printf("%d ", i);
