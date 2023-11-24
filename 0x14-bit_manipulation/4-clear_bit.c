@@ -9,7 +9,6 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
     unsigned long int comparator = 1;
-    unsigned long int temp;
 
     while (index != 0)
     {
@@ -17,7 +16,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
         index--;
     }
 
-    *n = *n & (-comparator);
+    *n = *n & ((-comparator) - 1);
 
     return (1);
 }
